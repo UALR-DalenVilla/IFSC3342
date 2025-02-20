@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Out with the old...</title>
-    <link rel="stylesheet" href="path-to-style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <meta
       name="description"
       content="We are going to refine this document down to a good starting point for all html5 projects moving forward."
@@ -11,69 +11,33 @@
     <meta name="author" content="Thomas Wallace" />
     <link rel="shortcut icon" href="/favicon.ico" />
   </head>
-  <style>
-   *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  
-   }
-   body{
-   
-   }
-   main{
-    background-image: url('img/grid.png'); /* Set grid as background */
-    display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-    grid-template-columns: repeat(4, 215px); /* 4 columns each 215px */
-    gap: 20px; /* Space between columns */
-    padding: 20px; /* Outer margins */
-   }
-   .primary{
-    background-color: beige;
-    grid-column: span 4;
-    padding:20px;
-   }
 
-   content{
-    background-color: beige;
-    grid-column: span 4;
-    padding:20px;
-   }
-
-
-   .primary-section{
-    grid-column: span 1; /* Sidebar occupies 1 column */
-    background: #333;
-    color: white;
-    padding: 20px;
-      }
-  </style>
   <body>
     <main>
-      <header class="primary">
+      <!--Header-->
+      <header class="header">
         <h1>Out with the old...</h1>
         <h2>Beginning the transistion to HTML5</h2>
         <nav>
-          <ul>
+          <ul class="nav">
             <li><a href="#">LINK</a></li>
             <li><a href="#">LINK</a></li>
             <li><a href="#">LINK</a></li>
           </ul>
         </nav>
       </header>
-      
+
+      <!--content-->
       <section id="content">
         <section id="primary-section">
           <article class="post">
             <header>
-            <p class="post-date">January 28, 2025</p>
-            <h1>
-              <a href="#" rel="bookmark" title="link to this post"
-                >The Rebel Force</a
-              >
-            </h1>
+              <p class="post-date">January 28, 2025</p>
+              <h1>
+                <a href="#" rel="bookmark" title="link to this post"
+                  >The Rebel Force</a
+                >
+              </h1>
             </header>
             <p>
               Hey, Luke! May the Force be with you. Alderaan? I'm not going to
@@ -88,7 +52,7 @@
               Alliance and a traitor! Take her away! You don't believe in the
               Force, do you?
             </p>
-            <ul>
+            <ul class="post-list">
               <li>
                 You are a part of the Rebel Alliance and a traitor! Take her
                 away!
@@ -101,13 +65,11 @@
               </li>
             </ul>
             <footer class="post-meta">Post Tags Go here....</footer>
-            </article>
+          </article>
         </section>
 
-
-
-        <!--#primary -->
-        <section id="secondary">
+        <!--#secondary -->
+        <section id="secondary-section">
           <article class="widget">
             <h1>Sample Sidebar Item</h1>
             <p>
@@ -145,7 +107,7 @@
         <!--#secondary -->
       </section>
       <!--#content -->
-      <footer id="colophon">
+      <footer id="footer">
         <p>&copy; 2025 <a href="#">Thomas Wallace</a></p>
       </footer>
     </main>
