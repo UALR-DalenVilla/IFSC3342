@@ -208,26 +208,27 @@ nav li {
 }
 
 nav a {
-  color: white; /* Makes links white for contrast */
-  text-decoration: none; /* Removes underline */
+  color: white;
+  text-decoration: none;
   font-weight: bold;
   font-size: 18px;
 }
 
 nav a:hover {
-  text-decoration: underline; /* Adds underline on hover */
+  text-decoration: underline;
 }
 
-/*header section content*/
 .introContent {
   height: 100%;
 }
+
 .headerContent {
-  display: flex; /* Enables Flexbox */
-  justify-content: space-between; /* Distributes sections with space */
-  align-items: flex-start; /* Aligns items to the top */
-  margin-top: 0; /* Removes default margin */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 0;
 }
+
 .contentLeft {
   width: 50%;
   float: left;
@@ -238,15 +239,15 @@ nav a:hover {
   flex-direction: column; /* Stacks items vertically */
   justify-content: center; /* Centers items vertically */
   align-items: center; /* Centers items horizontally */
-  min-height: 400px; /* Minimum height of 400px */
+  min-height: 400px;
 }
 
 .contentLeft img {
-  margin-top: 50px; /* Adds spacing above image */
-  width: 200px; /* Sets width of image */
-  border-radius: 50%; /* Rounds the corners */
-  height: auto; /* Maintains aspect ratio */
-  margin-bottom: 20px; /* Adds spacing below image */
+  margin-top: 50px;
+  width: 200px;
+  border-radius: 50%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 #name {
@@ -277,6 +278,67 @@ nav a:hover {
   color: #0b1320;
   margin-left: 50px;
 }
+
+@media screen and (max-width: 768px) {
+  .headerContent {
+    flex-direction: column; /* Stacks .contentLeft and .contentRight vertically */
+  }
+  .contentLeft,
+  .contentRight {
+    width: 100%;
+  }
+  nav ul {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+/*-----PROJECTS------*/
+.Projects-title {
+  color: #0b1320;
+  font-size: 50px;
+  font-weight: bold;
+  max-width: 1200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Projects {
+  /* background-image: url("../img/grid\ \(1\).png"); */
+  /* background-image: url("../img/grid.png"); */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  padding-left: 20px;
+  grid-auto-flow: row;
+  margin: 0 auto;
+}
+.project {
+  grid-column: span 4;
+  background-color: #fff;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: block; /* Makes the link a block element */
+  width: fit-content; /* Sizes the link to fit the text */
+  margin: 0 auto; /* Centers the link */
+
+  background: #1c3f60;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .project {
+    grid-column: span 12;
+  }
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
