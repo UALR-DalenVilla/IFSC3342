@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Out with the old...</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="path-to-style.css" />
     <meta
       name="description"
       content="We are going to refine this document down to a good starting point for all html5 projects moving forward."
@@ -11,33 +11,83 @@
     <meta name="author" content="Thomas Wallace" />
     <link rel="shortcut icon" href="/favicon.ico" />
   </head>
+  <style>
+   *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+   }
+   
+   main{
+    background-image: url('img/grid.png'); /* Set grid as background */
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 215px); /* 4 columns each 215px */
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Outer margins */
+   }
+   #content {
+    grid-column: span 4; /* Ensures it fills all columns */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Recreate a smaller 4-column grid */
+    gap: 20px;
+}
+   .primary{
+    background-color: beige;
+    grid-column: span 4;
+    padding:20px;
+   }
 
+
+   #primary-section {
+    grid-column: span 3; /* Spans 3 columns inside #content */
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Sidebar or any additional section to take the last column */
+#secondary {
+    grid-column: span 1; /* Takes the remaining column */
+    background: teal;
+    color: white;
+    padding: 20px;
+}
+
+#colophon{
+  grid-column: span 4;
+  background-color: beige;
+  padding:20px;
+}
+
+
+  </style>
   <body>
     <main>
-      <!--Header-->
-      <header class="header">
+      <header class="primary">
         <h1>Out with the old...</h1>
         <h2>Beginning the transistion to HTML5</h2>
         <nav>
-          <ul class="nav">
+          <ul>
             <li><a href="#">LINK</a></li>
             <li><a href="#">LINK</a></li>
             <li><a href="#">LINK</a></li>
           </ul>
         </nav>
       </header>
-
-      <!--content-->
+      
       <section id="content">
         <section id="primary-section">
           <article class="post">
             <header>
-              <p class="post-date">January 28, 2025</p>
-              <h1>
-                <a href="#" rel="bookmark" title="link to this post"
-                  >The Rebel Force</a
-                >
-              </h1>
+            <p class="post-date">January 28, 2025</p>
+            <h1>
+              <a href="#" rel="bookmark" title="link to this post"
+                >The Rebel Force</a
+              >
+            </h1>
             </header>
             <p>
               Hey, Luke! May the Force be with you. Alderaan? I'm not going to
@@ -52,7 +102,7 @@
               Alliance and a traitor! Take her away! You don't believe in the
               Force, do you?
             </p>
-            <ul class="post-list">
+            <ul>
               <li>
                 You are a part of the Rebel Alliance and a traitor! Take her
                 away!
@@ -65,11 +115,13 @@
               </li>
             </ul>
             <footer class="post-meta">Post Tags Go here....</footer>
-          </article>
+            </article>
         </section>
 
-        <!--#secondary -->
-        <section id="secondary-section">
+
+
+        <!--#primary -->
+        <section id="secondary">
           <article class="widget">
             <h1>Sample Sidebar Item</h1>
             <p>
@@ -107,7 +159,7 @@
         <!--#secondary -->
       </section>
       <!--#content -->
-      <footer id="footer">
+      <footer id="colophon">
         <p>&copy; 2025 <a href="#">Thomas Wallace</a></p>
       </footer>
     </main>
