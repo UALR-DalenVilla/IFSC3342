@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Resume/Assets/css/style.css" />
+    <script src="Assets/js/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "First Last",
+        "givenName": "First",
+        "familyName": "Last",
+        "image": "https://placehold.co/600x600?text=Headshot",
+        "description": "Short Bio Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+        "birthDate": "2000-10-12",
+        "nationality": "United States",
+        "homeLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Arkansas",
+            "addressCountry": "USA"
+          }
+        },
+        "telephone": "555-555-5555",
+        "email": "email@mail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2801 South University",
+          "addressLocality": "Little Rock",
+          "postalCode": "72204",
+          "addressCountry": "USA"
+        },
+        "url": "https://github.com/profile",
+        "sameAs": ["https://github.com/profile", "http://linkedin.com/profile"],
+        "knowsAbout": ["HTML", "PHP", "Java", "Scss"],
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Company Name 1",
+            "jobTitle": "Lead Web Developer",
+            "startDate": "2010-02-01",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+            "url": "http://link-to-company.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Anywhere, USA"
+            }
+          },
+          {
+            "@type": "Organization",
+            "name": "Company Name 2",
+            "jobTitle": "Senior Developer",
+            "startDate": "2006-02-21",
+            "endDate": "2009-02-21",
+            "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit...",
+            "url": "http://link-to-company.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Anywhere, USA"
+            }
+          }
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "University Name 1",
+          "description": "BA Web Design and Development",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Anywhere, USA"
+          },
+          "startDate": "2005-01-01",
+          "endDate": "2007-01-01"
+        }
+      }
+    </script>
+
+    <title>Resume</title>
+  </head>
+  <body>
+    <header class="container" id="top">
+      <!-- Main navigation -->
+      <nav class="primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main class="container main">
+      <h1 class="page-title">Dalen Villa</h1>
+      <section id="about">
+        <h2>Personal Details</h2>
+
+        <div class="bio">
+          <img src="../assets/img/people/dvilla2.jpg" alt="Your Name" />
+          <p>
+            I am a tech-savvy individual and a senior in college, pursuing a
+            career as a mobile and web developer. I am passionate about
+            consistently advancing my knowledge and skills. I have participated
+            in multiple seminars and boot camps on coding, mobile development,
+            and web technologies, equipping me with hands-on experience and a
+            strong foundation in development practices.
+          </p>
+        </div>
+
+        <dl class="details">
+          <dt>Name</dt>
+          <dd>First Last</dd>
+          <dt>Date of birth</dt>
+          <dd><time datetime="2000-10-12">03/25/2002</time></dd>
+          <dt>Nationality</dt>
+          <dd>United States</dd>
+          <dt>Location</dt>
+          <dd>Arkansas</dd>
+          <dt>Telephone</dt>
+          <dd>
+            <a href="tel:555-555-5555">903-506-3000</a>
+          </dd>
+          <dt>Email</dt>
+          <dd>
+            <a href="mailto:email@mail.com">dalenvilla@gmail.com</a>
+          </dd>
+          <dt>Address</dt>
+          <dd>
+            <span>2801 South University</span>
+            <span>Little Rock</span>
+            <span>72204</span>
+            <span>USA</span>
+          </dd>
+        </dl>
+        <ul class="related-links">
+          <li><a href="https://github.com/UALR-DalenVilla"> github</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/dalen-villa-788363277/"
+              >linkedin</a
+            >
+          </li>
+          <li><a href="resume.pdf" download>pdf resume</a></li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li class="skill">Java</li>
+          <li class="skill">React Native</li>
+          <li class="skill">React</li>
+          <li class="skill">Kotlin</li>
+          <li class="skill">Flutter</li>
+          <li class="skill">HTMl</li>
+          <li class="skill">C#</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <article class="job">
+          <h3>Student Developer</h3>
+          <div>
+            <span>Emerging Analytics Center</span>
+            <span>February 2024 - Present</span>
+            <p>Preform research and development with immsersive technolgoies</p>
+            <span>
+              <a href="https://eac.ualr.edu/">Emerging Analyatics Center</a>
+              <span>Little Rock AR</span>
+            </span>
+          </div>
+        </article>
+
+        <article class="job">
+          <h3>ACM Student Chapter Chair</h3>
+          <div>
+            <span>Assocation For Computing Machinery at UA Little Rock</span>
+            <span>May 2024 - Present</span>
+            <p>
+              Leads Inititives for the Assocation for Computing Machinery
+              Chapter at UA Little Rock
+            </p>
+            <span>
+              <a href="https://ualr.acm.org" target="_blank"
+                >Assocation for Computing Machinery at UA Little Rock</a
+              >
+              <span>Little Rock AR</span>
+            </span>
+          </div>
+        </article>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <article class="certificate">
+          <h3><abbr title="Master of Science">BA</abbr> Computer Science</h3>
+          <span>University of Arkansas at Little Rock</span>
+          <span>Arkansas, USA</span>
+          <span>2022-present</span>
+        </article>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div id="copyright">&copy; 2025 Dalen Villa | <a href="#top">Top</a></div>
+    </footer>
+  </body>
+</html>

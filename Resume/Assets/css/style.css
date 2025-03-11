@@ -1,15 +1,24 @@
-/*! HTML5 Boilerplate v9.0.0-RC1 | MIT License | https://html5boilerplate.com/ */
+/* CSS Custom Properties */
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+:root {
+  --main-bg-color: #16caf2;
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+  --primary-type-color: #fff;
+  --secondary-type-color: #012340;
+
+  --accent-color-1: #f25c05;
+  --accent-color-2: #f24405;
+
+  --primary-color: #1e90ff;
+  --secondary-color: #a0a0a0;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --border-color: #292929;
+  --accent-color: #4caf50;
+  --text-color: #e0e0e0;
+}
+
+/* ------ Box Sizing -------*/
 
 html {
   box-sizing: border-box;
@@ -20,230 +29,296 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+/* ------ Typography -------*/
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
+/* ------ Fluid Images -------*/
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
+img {
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
   display: block;
-  height: 1px;
+  margin: auto;
+}
+
+/* ------ Utility Classes  -------*/
+.container {
+  max-width: 420px; /* Design Time */
+  margin: 0 auto;
+}
+
+/* ------ Helper Classes -------*/
+.visuallyhidden {
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
-  /* 1 */
+  white-space: nowrap; /* 1 */
 }
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
+/* ------ Global Styles -------*/
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
+nav.primary {
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.clearfix::after {
-  clear: both;
+nav.primary ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+nav.primary ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+/* Hover effect */
+nav.primary ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+#top {
+  box-shadow: #121212 0px 0px 10px;
 
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+  background-color: var(--surface-color);
+  color: var(--primary-type-color);
+  padding: 20px;
 }
+
+.page-title {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: var(--surface-color);
+}
+
+/* ------ About Section -------*/
+
+#about {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3); /* Only shadow on bottom & sides */
+  background-color: var(--surface-color);
+  color: var(--primary-type-color);
+  padding: 20px;
+}
+
+.bio p {
+  text-align: center;
+}
+
+.details {
+  max-width: 600px;
+  margin: auto;
+  background-color: var(--surface-color);
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  text-align: left;
+}
+
+.details dt {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.details dd {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.details a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.details a:hover {
+  text-decoration: underline;
+}
+
+.details dd span {
+  display: block;
+}
+
+.related-links {
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.related-links li {
+  list-style: none;
+}
+.related-links a {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.related-links a:hover {
+  background-color: var(--accent-color);
+}
+
+/* ------ Skills Section -------*/
+#skills {
+  box-shadow: #121212 0px 0px 10px;
+
+  margin-top: 10px;
+  background-color: var(--surface-color);
+  color: var(--primary-type-color);
+  padding: 20px;
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.skill {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* ------ Experience Section -------*/
+#experience {
+  box-shadow: #121212 0px 0px 10px;
+
+  margin-top: 10px;
+  background-color: var(--surface-color);
+  color: var(--primary-type-color);
+  padding: 20px;
+}
+
+.job {
+  background-color: var(--surface-color);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.job h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.job div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.job span {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.job p {
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.job a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.job a:hover {
+  text-decoration: underline;
+}
+
+/* ------ Education Section -------*/
+#education {
+  box-shadow: #121212 0px 0px 10px;
+  margin-top: 10px;
+  background-color: var(--surface-color);
+  color: var(--primary-type-color);
+  padding: 20px;
+}
+
+.certificate {
+  background-color: var(--surface-color); /* Matches dark mode theme */
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--primary-color); /* Accent left border */
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.certificate h3 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.certificate span {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ------ Media Queries -------*/
