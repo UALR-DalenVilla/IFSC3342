@@ -322,3 +322,80 @@ footer {
 }
 
 /* ------ Media Queries -------*/
+/*Phone*/
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px; /* Design Time */
+  }
+
+  nav.primary ul {
+    flex-direction: row;
+  }
+
+  nav.primary ul li a {
+    width: auto;
+  }
+
+  .details {
+    grid-template-columns: auto 1fr;
+    margin: a;
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bio p {
+    text-align: justify;
+    padding-left: 20px;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    text-align: left;
+  }
+  /*Tablet*/
+
+  @media screen and (min-width: 768px) {
+    .details {
+      grid-template-columns: 1fr 2fr;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .details dt {
+    text-align: left;
+    justify-self: start;
+  }
+
+  .details dd {
+    text-align: left;
+    justify-self: start;
+  }
+}
+/* desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .details {
+    max-width: 1000px;
+  }
+  .related-links {
+    max-width: 1000px;
+  }
+  .skills {
+    max-width: 1000px;
+  }
+  .experience {
+    max-width: 1000px;
+  }
+  .education {
+    max-width: 1000px;
+  }
+}
