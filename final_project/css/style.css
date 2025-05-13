@@ -1,0 +1,167 @@
+/* === GLOBAL STYLES === */
+body {
+  background-color: #ffe6f0;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.section-title {
+  color: #ff4081;
+}
+/* === GLOBAL FONT STYLES === */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffe6f0;
+  color: #222;
+}
+
+/* Apply Fredoka to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.section-title,
+.card-title,
+.badge,
+.accordion-button {
+  font-family: "Fredoka", sans-serif;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #ff4081;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+  font-weight: bold;
+}
+.navbar .nav-link:hover {
+  color: #fff176 !important;
+}
+
+/* === CAROUSEL === */
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* === BUTTONS === */
+.btn-daves {
+  background-color: #00e5ff;
+  color: #ff4081;
+  font-weight: bold;
+  border: none;
+}
+.btn-daves:hover {
+  background-color: #fff176;
+  color: #ff4081;
+}
+
+/* === SOCIAL ICONS === */
+.social-icons a:hover {
+  color: #fff176;
+  transition: color 0.3s ease;
+}
+
+/* === CARD STYLES (Menu Section) === */
+.card {
+  background-color: white;
+  color: #ff4081;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  color: #ff4081;
+}
+.card-text {
+  color: #444;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #ff4081;
+  color: white;
+}
+
+/* === VISIT US SECTION === */
+.visit-us {
+  align-items: start;
+}
+.visit-info h2 {
+  color: #ff4081;
+  margin-bottom: 1rem;
+}
+.welcome-blurb {
+  color: #ffe6f0;
+  margin-bottom: 1.5rem;
+}
+.address,
+.phone,
+.store-hours p {
+  color: #333;
+}
+.store-hours p {
+  margin-left: 1rem;
+}
+.visit-us .visit-info {
+  padding-right: 2rem;
+}
+.map-wrapper {
+  border-left: 4px solid #00e5ff;
+
+  padding-left: 2rem;
+}
+@media (max-width: 991px) {
+  .visit-us .visit-info {
+    border-right: none;
+    border-bottom: 4px solid #00e5ff;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .map-wrapper {
+    border-left: none;
+
+    padding-left: 0;
+
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* === FAQ ACCORDION === */
+.faq-accordion .section-title {
+  color: white;
+  margin-top: 0;
+}
+.faq-accordion .accordion-item {
+  background-color: #ffe6f0;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+.faq-accordion .accordion-button {
+  background-color: #ff4081;
+  color: white;
+}
+.faq-accordion .accordion-button:not(.collapsed) {
+  background-color: #00e5ff;
+  color: #ff4081;
+}
+.faq-accordion .accordion-body {
+  background-color: white;
+  color: #333;
+  border-top: 2px solid #00e5ff;
+}
+
+.featured-donut p {
+  color: #333;
+}
+
+.badge.bg-info {
+  background-color: #00e5ff !important;
+  color: #ff4081 !important;
+}

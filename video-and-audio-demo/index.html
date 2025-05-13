@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <!-- audio.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/audiojs@0.1.1/audiojs.css"
+    />
+
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+        background: #f8f9fa;
+      }
+      section {
+        margin-bottom: 3rem;
+      }
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      audio {
+        width: 100%;
+        max-width: 500px;
+        border: 2px solid #007bff;
+        border-radius: 8px;
+        background-color: #f1f1f1;
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Demo (with Video.js Player)</h1>
+
+    <!-- Video Player -->
+    <section>
+      <h2>Custom Video Player (Video.js)</h2>
+      <video
+        id="my-video"
+        class="video-js vjs-default-skin"
+        controls
+        preload="auto"
+        width="640"
+        height="360"
+        poster="hudson-shelter-falls-poster.jpg"
+        data-setup="{}"
+      >
+        <source src="/video-and-audio-demo/video/hudson-shelter-falls.mp4" />
+        <source src="/video-and-audio-demo/video/hudson-shelter-falls.webm" />
+        <source src="/video-and-audio-demo/video/hudson-shelter-falls.ogv" />
+
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Audio Player with audio.js -->
+    <section>
+      <h2>Audio Player (with audio.js)</h2>
+
+      <audio
+        src="/video-and-audio-demo/audio/thunder.mp3"
+        preload="auto"
+        controls
+      />
+      <p><a href="audio/thunder.mp3" download>Download the Audio</a></p>
+    </section>
+
+    <!-- audio.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/audiojs@0.1.1/audio.min.js"></script>
+    <script>
+      audiojs.events.ready(function () {
+        var as = audiojs.createAll();
+      });
+    </script>
+
+    <!-- Video.js Script -->
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  </body>
+</html>

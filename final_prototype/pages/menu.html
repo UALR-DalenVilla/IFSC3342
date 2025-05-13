@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dave's Donuts</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body itemscope itemtype="https://schema.org/WebPage">
+    <!--=====Navbar Section=====-->
+    <header class="custom-navbar">
+      <div class="nav-container">
+        <div class="nav-brand">Dave's Donuts</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Menu Section -->
+    <main>
+      <section class="menu-section">
+        <h1 class="section-title">Our Donuts</h1>
+        <div class="menu-grid">
+          <!-- Sample Donut Cards -->
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/glazed.webp"
+              alt="Glazed Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Classic Glazed</h3>
+            <p class="card-text" itemprop="description">
+              Sweet, shiny, and timeless.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/chocolate-filled.webp"
+              alt="Chocolate Filled Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Chocolate Filled</h3>
+            <p class="card-text" itemprop="description">
+              Rich chocolate center with chocolate sprinkles.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/rainbow-sprinkes.webp"
+              alt="Sprinkle Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Rainbow Sprinkle</h3>
+            <p class="card-text" itemprop="description">
+              A fun twist topped with colorful joy.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/boston_cream.webp"
+              alt="Boston Cream Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Boston Cream</h3>
+            <p class="card-text" itemprop="description">
+              Creamy custard inside, chocolate glaze on top.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/strawberry_frosted.webp"
+              alt="Strawberry Frosted Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Strawberry Frosted</h3>
+            <p class="card-text" itemprop="description">
+              Bright strawberry glaze with a fruity punch.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/maple-bacon.webp"
+              alt="Maple Bacon Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Maple Bacon</h3>
+            <p class="card-text" itemprop="description">
+              Sweet maple icing with crispy bacon bits.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/apple-fritter.webp"
+              alt="Apple Fritter"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Apple Fritter</h3>
+            <p class="card-text" itemprop="description">
+              Chunky apple bites swirled into fried dough.
+            </p>
+          </div>
+
+          <div
+            class="menu-card"
+            itemscope
+            itemtype="https://schema.org/Product"
+          >
+            <img
+              src="../img/flavors-webp/Cinnamon-sugar.webp"
+              alt="Cinnamon Sugar Donut"
+              itemprop="image"
+            />
+            <h3 class="card-title" itemprop="name">Cinnamon Sugar</h3>
+            <p class="card-text" itemprop="description">
+              Coated in a nostalgic cinnamon-sugar blend.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=====Footer Section=====-->
+    <footer class="custom-footer">
+      <p>© 2025 Dave’s Donuts. Sweetness served daily.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"
+          ><i class="fab fa-facebook fa-lg"></i
+        ></a>
+        <a href="#" aria-label="Instagram"
+          ><i class="fab fa-instagram fa-lg"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
